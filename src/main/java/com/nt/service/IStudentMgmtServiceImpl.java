@@ -15,6 +15,7 @@ public class IStudentMgmtServiceImpl implements IStudentMgmtService{
 	private IStudentRepo repo;
 	@Override
 	public String registerStudent(Students student) {
+		@SuppressWarnings("null")
 		Students s=repo.save(student);
 		return "Student is registered with id "+ s.getStudentID();
 	}
